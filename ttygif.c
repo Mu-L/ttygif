@@ -164,7 +164,7 @@ take_snapshot_linux(const char *img_path, Options o)
     // ensure text has been written before taking screenshot
     usleep(50000);
 
-    if (sprintf(cmd, "xwd -id %s -out %s", o.window_id, img_path) < 0) {
+    if (sprintf(cmd, "xwd -id %s -out %s -silent", o.window_id, img_path) < 0) {
         return -1;
     }
 
